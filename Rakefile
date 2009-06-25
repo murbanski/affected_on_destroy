@@ -5,7 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "affected_on_destroy"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{Rails plugin showing which related records will be deleted from DB when :dependent => :destroy is used}
+    gem.description = %Q{Rails plugin showing which related records will be deleted from DB when :dependent => :destroy is used}
     gem.email = "marcin@urbanski.vdl.pl"
     gem.homepage = "http://github.com/murbanski/affected_on_destroy"
     gem.authors = ["Marcin Urbanski"]

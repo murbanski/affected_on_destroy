@@ -1,7 +1,0 @@
-= affected_on_destroy
-
-Description goes here.
-
-== Copyright
-
-Copyright (c) 2009 Marcin Urbanski. See LICENSE for details.
