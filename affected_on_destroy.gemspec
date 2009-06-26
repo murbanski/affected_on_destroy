@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{affected_on_destroy}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marcin Urbanski"]
@@ -14,16 +14,12 @@ Gem::Specification.new do |s|
      "README.md"
   ]
   s.files = [
-    ".gitignore",
-     "LICENSE",
+    "LICENSE",
      "README.md",
      "Rakefile",
      "VERSION",
-     "affected_on_destroy.gemspec",
      "lib/affected_on_destroy.rb",
-     "rails/init.rb",
-     "test/affected_on_destroy_test.rb",
-     "test/test_helper.rb"
+     "rails/init.rb"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/murbanski/affected_on_destroy}
@@ -31,10 +27,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{Rails plugin showing which related records will be deleted from DB when :dependent => :destroy is used}
-  s.test_files = [
-    "test/affected_on_destroy_test.rb",
-     "test/test_helper.rb"
-  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
