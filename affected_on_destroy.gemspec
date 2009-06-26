@@ -17,9 +17,12 @@ Gem::Specification.new do |s|
     ".document",
      ".gitignore",
      "LICENSE",
+     "README.md",
      "Rakefile",
      "VERSION",
+     "affected_on_destroy.gemspec",
      "lib/affected_on_destroy.rb",
+     "rails/init.rb",
      "test/affected_on_destroy_test.rb",
      "test/test_helper.rb"
   ]
