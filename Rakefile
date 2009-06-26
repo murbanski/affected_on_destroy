@@ -10,6 +10,7 @@ begin
     gem.email = "marcin@urbanski.vdl.pl"
     gem.homepage = "http://github.com/murbanski/affected_on_destroy"
     gem.authors = ["Marcin Urbanski"]
+    gem.files = FileList["[A-Z]*", "{rails,lib}/**/*"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 
