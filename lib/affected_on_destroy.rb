@@ -47,10 +47,6 @@ module AffectedOnDestroy
     affected_objects.flatten.uniq.sort_by {|elem| elem.class.to_s }
   end
 
-  def affected_on_destroy_info
-    self.affected_on_destroy.map{|obj| "#{obj.class.to_s} #{obj.id}"}
-  end
-
 end
 
 

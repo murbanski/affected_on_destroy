@@ -36,6 +36,7 @@ schema.rb:
  
 
 models:
+
 	class User < ActiveRecord::Base
 	  has_many :blogs, :dependent => :destroy
 	end
@@ -51,6 +52,7 @@ models:
 
 
 Sample script/console session:
+
 	>>  marcin = User.create(:login => 'marcin', :password => 'my_pass')
 	=> #<User id: 1, login: "marcin", password: "my_pass", created_at: "2009-06-26 01:47:36", updated_at: "2009-06-26 01:47:36">
 
@@ -63,23 +65,19 @@ Sample script/console session:
 	=> #<Post id: 2, blog_id: 1, content: "Ruby tricks #2", created_at: "2009-06-26 01:48:45", updated_at: "2009-06-26 01:48:45">
 
 What records will be affected when we destroy user 'marcin'?
+
 	>> marcin.affected_on_destroy
 	=> [#<Blog id: 1, user_id: 1, name: "My Ruby Blog", created_at: "2009-06-26 01:47:57", updated_at: "2009-06-26 01:47:57">, 
 	#<Post id: 1, blog_id: 1, content: "Ruby tricks #1", created_at: "2009-06-26 01:48:40", updated_at: "2009-06-26 01:48:40">, 
 	#<Post id: 2, blog_id: 1, content: "Ruby tricks #2", created_at: "2009-06-26 01:48:45", updated_at: "2009-06-26 01:48:45">]
 
-A bit cleaner summary - only with model name and id:
-	>> puts marcin.affected_on_destroy_info
-	Blog 1
-	Post 1
-	Post 2
-	=> nil
-
 Which models are affected when destroying user?
+
 	>> User.affected_on_destroy
 	=> ["Blog", "Post"]
 
 Same for blog:
+
 	>> Blog.affected_on_destroy
 	=> ["Post"]
 
